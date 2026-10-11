@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PMBA Tax | Účetní kancelář – účetnictví a mzdy | celá ČR</title>
+<meta name="description" content="Účetní kancelář pro malé a střední podniky z celé České republiky – Praha, Pardubice, Děčín i jinde. Vedení účetnictví, zpracování mezd, přiznání k DPH a dani z příjmů, převzetí agendy od dosavadní účetní.">
+<link rel="canonical" href="https://pmba-tax.cz/">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website"><meta property="og:locale" content="cs_CZ"><meta property="og:site_name" content="PMBA Tax">
+<meta property="og:url" content="https://pmba-tax.cz/">
+<meta property="og:title" content="PMBA Tax – účetnictví a mzdy">
+<meta property="og:description" content="Účetní kancelář pro malé a střední podniky z celé České republiky.">
+<meta property="og:image" content="https://pmba-tax.cz/pmba-tax-og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AccountingService","name":"PMBA Tax s.r.o.","url":"https://pmba-tax.cz/","logo":"https://pmba-tax.cz/pmba-tax-znacka.png","image":"https://pmba-tax.cz/pmba-tax-og.png","email":"info@pmba-tax.cz","telephone":"+420776680002","taxID":"30133530","identifier":{"@type":"PropertyValue","propertyID":"IČO","value":"30133530"},"address":{"@type":"PostalAddress","streetAddress":"Husovo nám. 74/5","addressLocality":"Děčín","postalCode":"405 02","addressCountry":"CZ"},"areaServed":{"@type":"Country","name":"Česká republika"},"knowsAbout":["vedení účetnictví","zpracování mezd","přiznání k DPH","kontrolní hlášení","přiznání k dani z příjmů právnických osob","roční účetní závěrka"],"description":"Účetní kancelář pro malé a střední podniky – vedení účetnictví, zpracování mezd a daňová přiznání."}
+</script>
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" href="pmba-tax-favikona-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600&display=swap">
+<style>
+/* Jednostránkový web PMBA Tax – světlý: ledově modrá plocha, námořnická modrá jako akcent, šalvějová zelená jen pro drobné značky */
+:root{
+  --navy:#0D1B33; --sage:#6AA095; --sage-d:#3E6B62; --ice:#E3ECF7; --steel:#D9E3EE;
+  --ink:#0D1B33; --muted:#58635F; --paper:#FFFFFF; --ice-2:#F2F6FB;
+  --serif:"Libre Baskerville", Georgia, "Times New Roman", serif;
+  --sans:"Work Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --w:1160px; color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 15px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+h1,h2{font-family:var(--serif)}
+h3{font:600 15px/1.4 var(--sans)}
+.wrap{max-width:var(--w);margin:0 auto;padding-inline:24px}
+.eyebrow{font:500 11.5px/1.5 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--sage-d)}
+:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:500 14.5px/1 var(--sans);text-decoration:none;padding:14px 22px;border:1.5px solid var(--navy);background:var(--navy);color:#fff;cursor:pointer;transition:background .3s,color .3s}
+.btn:hover{background:transparent;color:var(--navy)}
+.btn.line{background:transparent;color:var(--navy)}
+.btn.line:hover{background:var(--navy);color:#fff}
+
+/* lišta */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid var(--steel);transition:box-shadow .3s}
+.top.small{box-shadow:0 6px 20px rgba(13,27,51,.06)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:76px}
+.brand img{height:40px;width:auto}
+.nav{display:flex;align-items:center;gap:34px;font-size:14.5px;font-weight:500}
+.nav a{text-decoration:none;color:var(--ink);padding-block:6px;border-bottom:1.5px solid transparent}
+.nav a:hover,.nav a.on{color:var(--ink);border-bottom-color:var(--sage)}
+.nav .btn{color:#fff;padding:11px 20px;border-bottom:1.5px solid var(--navy);margin-left:6px}
+.nav .btn:hover{color:var(--navy)}
+.menu-toggle{display:none;background:none;border:1px solid var(--steel);padding:9px 12px;font:500 14px var(--sans);color:var(--ink);cursor:pointer}
+@media (max-width:880px){
+  .menu-toggle{display:block}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;align-items:flex-start;gap:6px;padding:12px 24px 22px;border-bottom:1px solid var(--steel)}
+  .nav.open{display:flex}
+  .brand img{height:32px}
+}
+
+/* úvod */
+.hero{background:var(--ice);border-bottom:1px solid var(--steel)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:64px;padding-block:80px 88px;align-items:start}
+.hero-text{display:grid;gap:26px;padding-top:8px}
+.hero h1{font-size:clamp(30px,3.6vw,44px);line-height:1.18}
+.hero h1 em{color:var(--sage-d)}
+.hero .lead{font-size:16px;color:var(--muted);max-width:52ch}
+.facts{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--steel);max-width:520px}
+.facts li{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--steel)}
+.facts b{font:400 22px/1 var(--serif);color:var(--navy);font-variant-numeric:lining-nums}
+.facts span{color:var(--ink)}
+.facts small{display:block;color:var(--muted);font-size:13.5px}
+
+/* rychlá poptávka */
+.quote{background:#fff;border:1px solid var(--steel);border-top:3px solid var(--navy);padding:30px 28px 28px;display:grid;gap:18px;box-shadow:0 18px 40px rgba(13,27,51,.07)}
+.quote h2{font-size:22px;line-height:1.3}
+.quote>p{color:var(--muted);font-size:14px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px 14px}
+.form .full{grid-column:1/-1}
+.form label{display:grid;gap:5px;font-size:13px;font-weight:500;color:var(--ink);min-width:0}
+.form input,.form select,.form textarea{font:400 15px/1.45 var(--sans);padding:10px 12px;border:1px solid #AEB8C4;background:#fff;color:var(--ink);border-radius:0;width:100%;min-width:0}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--sage);outline-offset:0;border-color:var(--sage)}
+.form textarea{min-height:76px;resize:vertical}
+.form .small{font-size:12px;color:var(--muted);font-weight:400}
+.form .btn{width:100%}
+.form .ok{grid-column:1/-1;background:var(--ice);border-left:3px solid var(--sage);padding:12px 16px;font-size:14px}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr;gap:44px;padding-block:56px 64px}}
+@media (max-width:480px){.form{grid-template-columns:1fr}.quote{padding:24px 18px}}
+
+
+/* úvod – úprava */
+.hero .wrap{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:center}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:4px}
+.hero .facts{margin:0;background:none;border:0;border-top:1px solid #C3D2E3;padding:0}
+.hero .facts li{border-bottom:1px solid #C3D2E3}
+
+.hero h1 .h1a{display:block}
+.hero h1 .h1b{display:block;margin-top:22px;padding-top:20px;border-top:2px solid var(--sage);max-width:max-content;font-style:italic;color:var(--sage-d);font-size:.82em}
+.hero .facts li{grid-template-columns:18px 1fr;gap:14px}
+.hero .facts li:before{content:"";width:10px;height:2px;background:var(--sage);transform:translateY(-4px)}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr}}
+
+/* poptávka */
+.req{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:start}
+.req>div:first-child{display:grid;gap:14px}
+.req h2{font-size:clamp(26px,2.8vw,34px)}
+.req p{color:var(--muted)}
+.req .form{background:#fff;border:1px solid var(--steel);padding:28px}
+.req .form .btn{width:auto}
+@media (max-width:900px){.req{grid-template-columns:1fr;gap:28px}}
+@media (max-width:480px){.req .form{padding:20px 16px}}
+
+/* sekce */
+.sec{padding-block:96px}
+.sec.ice{background:var(--ice-2);border-block:1px solid var(--steel)}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 64px;align-items:end;margin-bottom:48px}
+.head h2{font-size:clamp(26px,2.8vw,34px);line-height:1.2;margin-top:10px}
+.head p{color:var(--muted);max-width:56ch}
+@media (max-width:860px){.sec{padding-block:68px}.head{grid-template-columns:1fr}}
+
+/* služby */
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:2px solid var(--navy)}
+.svc>article{padding:30px 30px 34px 0;display:grid;gap:14px;align-content:start}
+.svc>article+article{padding-left:30px;border-left:1px solid var(--steel)}
+.svc .no{font:500 11.5px var(--sans);letter-spacing:.16em;color:var(--muted)}
+.svc h3{font:400 24px/1.25 var(--serif)}
+.svc p{color:var(--muted)}
+.svc ul.key{list-style:none;margin:4px 0 0;padding:0;display:grid;gap:8px}
+.svc ul.key li{padding-left:18px;position:relative}
+.svc ul.key li:before{content:"";position:absolute;left:0;top:.72em;width:8px;height:2px;background:var(--sage)}
+details.more{border-top:1px solid var(--steel);margin-top:6px}
+details.more summary{list-style:none;cursor:pointer;padding:14px 0 4px;font-weight:500;color:var(--navy);display:flex;justify-content:space-between;align-items:center}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary:after{content:"+";font:400 22px/1 var(--sans);color:var(--sage-d);transition:transform .3s}
+details.more[open] summary:after{transform:rotate(45deg)}
+details.more dl{margin:10px 0 0;display:grid;gap:12px}
+details.more dt{font-weight:600;font-size:14px}
+details.more dd{margin:2px 0 0;color:var(--muted);font-size:14px}
+@media (max-width:900px){.svc{grid-template-columns:1fr}.svc>article,.svc>article+article{padding:28px 0;border-left:0;border-bottom:1px solid var(--steel)}}
+
+/* převzetí */
+.start{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;background:#fff;border:1px solid var(--steel)}
+.start>div{padding:26px 24px 28px;display:grid;gap:8px;align-content:start}
+.start>div+div{border-left:1px solid var(--steel)}
+.start .k{font:500 11px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--sage-d)}
+.start p{color:var(--muted);font-size:14px}
+@media (max-width:900px){.start{grid-template-columns:1fr 1fr}.start>div:nth-child(3){border-left:0}.start>div:nth-child(n+3){border-top:1px solid var(--steel)}}
+@media (max-width:540px){.start{grid-template-columns:1fr}.start>div+div{border-left:0;border-top:1px solid var(--steel)}}
+
+/* rozsah */
+.cmp-wrap{overflow-x:auto;border:1px solid var(--steel);background:#fff}
+.cmp{width:100%;border-collapse:collapse;min-width:640px}
+.cmp th,.cmp td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--steel);vertical-align:middle}
+.cmp thead th{vertical-align:bottom;padding-block:22px 16px;border-bottom:2px solid var(--navy)}
+.cmp thead th span{display:block;font:500 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.cmp thead th b{font:400 19px/1.25 var(--serif)}
+.cmp thead th.hl{background:var(--ice)}
+.cmp td.hl{background:var(--ice-2)}
+.cmp td:not(:first-child),.cmp th:not(:first-child){text-align:center;width:19%}
+.cmp tbody th{font-weight:400;color:var(--ink)}
+.cmp tr.grp th{font:600 11px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--sage-d);padding-top:22px;border-bottom:1px solid var(--steel)}
+.y{display:inline-block;width:18px;height:18px;border-radius:50%;background:var(--navy);position:relative}
+.y:after{content:"";position:absolute;left:6px;top:3px;width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.n{display:inline-block;width:12px;height:1.5px;background:#B5C0CC;vertical-align:middle}
+.price{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:40px}
+.price div{display:grid;gap:6px;align-content:start;border-top:2px solid var(--sage);padding-top:16px}
+.price p{color:var(--muted);font-size:14px}
+@media (max-width:900px){.price{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.price{grid-template-columns:1fr}}
+
+/* kontakt */
+.contact{background:var(--navy);color:#fff}
+.contact .wrap{padding-block:88px}
+.contact .eyebrow{color:#A9CBC3}
+.contact h2{font-size:clamp(26px,2.8vw,34px);margin-top:10px}
+.contact .lead{color:#B9C4D0;margin-top:14px;max-width:56ch}
+.ct-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px 48px;align-items:end}
+.ct-where{display:grid;gap:8px;justify-items:end;text-align:right}
+.ct-where .cities{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:0;font:400 20px/1.2 var(--serif);color:#fff}
+.ct-where .cities span+span{border-left:1px solid #6AA095;margin-left:16px;padding-left:16px}
+.ct-where p:last-child{color:#B9C4D0;font-size:14px}
+@media (max-width:760px){.ct-head{grid-template-columns:1fr}.ct-where{justify-items:start;text-align:left}.ct-where .cities{justify-content:flex-start}}
+.people{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:48px;border-top:1px solid rgba(255,255,255,.18)}
+.people>div{padding:28px 28px 8px 0;display:grid;gap:8px;align-content:start;font-variant-numeric:tabular-nums}
+.people>div+div{padding-left:28px;border-left:1px solid rgba(255,255,255,.14)}
+.people .r{font:500 11px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#A9CBC3}
+.people h3{font:400 21px/1.3 var(--serif)}
+.people p{color:#B9C4D0;font-size:14px}
+.people .c{color:#fff;font-size:14.5px;margin-top:6px;display:grid;gap:2px}
+.contact .btn{background:#fff;color:var(--navy);border-color:#fff;margin-top:44px}
+.contact .btn:hover{background:transparent;color:#fff}
+@media (max-width:900px){.people{grid-template-columns:1fr}.people>div,.people>div+div{padding:24px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.14)}}
+
+/* patička */
+footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.14);color:#B9C4D0;font-size:12.5px;line-height:1.6}
+footer .wrap{padding-block:30px 36px;display:grid;gap:18px}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;align-items:center}
+footer img{height:30px;width:auto}
+footer a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(169,203,195,.5)}
+footer details summary{cursor:pointer;color:#fff;display:inline-block;border-bottom:1px solid rgba(169,203,195,.5)}
+footer details[open] summary{margin-bottom:12px}
+footer .gdpr{display:grid;gap:10px;max-width:760px;color:#B9C4D0}
+footer .gdpr b{color:#fff;font-weight:500}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style></head><body>
+
+<header class="top"><div class="wrap">
+<a class="brand" href="#uvod" aria-label="PMBA Tax – úvod"><img src="pmba-tax-znacka.png" alt="PMBA Tax" width="1320" height="314"></a>
+<button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav class="nav" id="nav"><a href="#sluzby">Služby</a><a href="#rozsah">Rozsah</a><a href="#kontakt">Kontakt</a><a class="btn" href="#poptavka">Napsat nám</a></nav>
+</div></header>
+
+<main>
+<section class="hero" id="uvod"><div class="wrap">
+<div class="hero-text">
+<span class="eyebrow">Účetnictví · Mzdy</span>
+<h1><span class="h1a">Vedeme účetnictví a mzdy.</span><span class="h1b">Vy se věnujete svému podnikání.</span></h1>
+<p class="lead">Pro malé a střední podniky z celé České republiky. Převezmeme agendu od dosavadní účetní, zpracujeme doklady i mzdy a připravíme přiznání k DPH.</p>
+<div class="ctas"><a class="btn" href="#poptavka">Napsat nám</a><a class="btn line" href="#sluzby">Co za vás povedeme</a></div>
+</div>
+<ul class="facts">
+<li><span>Účetnictví i mzdy na jednom místě<small>jeden tým, jedna smlouva, jeden kontakt</small></span></li>
+<li><span>DPH a kontrolní hlášení<small>zpracujeme spolu s účetnictvím</small></span></li>
+<li><span>Převzetí od dosavadní účetní<small>bez výpadku ve mzdách i v přiznáních</small></span></li>
+</ul>
+
+
+</div></section>
+
+<section class="sec" id="sluzby"><div class="wrap">
+<div class="head"><div><span class="eyebrow">Služby</span><h2>Co za vás povedeme</h2></div><p>Pravidelnou agendu, kterou zákon od společnosti vyžaduje. Rozsah si zvolíte – samostatně účetnictví, samostatně mzdy, nebo obojí.</p></div>
+<div class="svc">
+<article><h3>Účetnictví</h3><p>Od zaúčtování dokladu po zveřejněnou závěrku.</p>
+<ul class="key"><li>zaúčtování dokladů, banky a pokladny</li><li>měsíční uzávěrka</li><li>roční účetní závěrka</li></ul>
+<details class="more"><summary>Celý rozsah</summary><dl>
+<div><dt>Průběžné účetnictví</dt><dd>Přijaté a vydané faktury, bankovní výpisy, pokladna, interní doklady.</dd></div>
+<div><dt>Evidence majetku</dt><dd>Karty dlouhodobého majetku, účetní a daňové odpisy, drobný majetek.</dd></div>
+<div><dt>Pohledávky a závazky</dt><dd>Odsouhlasení saldokonta, upozornění na položky po splatnosti.</dd></div>
+<div><dt>Měsíční uzávěrka</dt><dd>Časové rozlišení, dohadné položky, kontrola zůstatků.</dd></div>
+<div><dt>Roční závěrka</dt><dd>Podklady k inventarizaci, rozvaha, výkaz zisku a ztráty, příloha, uložení do sbírky listin.</dd></div>
+</dl></details></article>
+
+<article><h3>Mzdy a personalistika</h3><p>Od docházky po výplatní pásku a hlášení.</p>
+<ul class="key"><li>výpočet mezd a odměn z dohod</li><li>odvody pojistného a zálohy na daň</li><li>měsíční hlášení zaměstnavatele</li></ul>
+<details class="more"><summary>Celý rozsah</summary><dl>
+<div><dt>Zpracování mezd</dt><dd>Mzdy, dohody o provedení práce a o pracovní činnosti, náhrady mzdy, cestovní náhrady, stravenkový paušál.</dd></div>
+<div><dt>Srážky ze mzdy</dt><dd>Včetně exekucí a insolvencí.</dd></div>
+<div><dt>Hlášení a oznámení</dt><dd>Jednotné měsíční hlášení zaměstnavatele, nástupy a odchody, potvrzení pro odcházející zaměstnance.</dd></div>
+<div><dt>Roční agenda</dt><dd>Roční zúčtování záloh, potvrzení o zdanitelných příjmech, vyúčtování daně, mzdové listy.</dd></div>
+<div><dt>Evidence zaměstnanců</dt><dd>Přehled dovolené, upozornění na konec zkušební doby a pracovních poměrů na dobu určitou.</dd></div>
+</dl></details></article>
+
+<article><h3>Přiznání a hlášení</h3><p>Přiznání z vedené evidence, v zákonných lhůtách.</p>
+<ul class="key"><li>přiznání k DPH a kontrolní hlášení</li><li>přiznání k dani z příjmů a zálohy</li><li>další přiznání a výkazy</li></ul>
+<details class="more"><summary>Celý rozsah</summary><dl>
+<div><dt>DPH</dt><dd>Přiznání, kontrolní hlášení, souhrnné hlášení při plněních do jiných států EU.</dd></div>
+<div><dt>Daň z příjmů právnických osob</dt><dd>Přiznání sestavené z účetní závěrky, výpočet záloh.</dd></div>
+<div><dt>Další přiznání</dt><dd>Daň z nemovitých věcí, silniční daň – pokud se vás týkají.</dd></div>
+<div><dt>Výkazy</dt><dd>Účetní a mzdové výkazy pro Český statistický úřad.</dd></div>
+<div><dt>Daňové poradenství</dt><dd>Poskytuje spolupracující advokátka Mgr. Veronika Pastorová v rámci výkonu advokacie.</dd></div>
+</dl></details></article>
+</div>
+</div></section>
+
+<section class="sec ice" id="zacatek"><div class="wrap">
+<div class="head"><div><span class="eyebrow">Jak začít</span><h2>Přechod od dosavadní účetní</h2></div><p>Agendu převezmeme tak, aby první mzdy i první přiznání proběhly bez výpadku. Převzetí je zahrnuto v ceně prvního měsíce.</p></div>
+<div class="start">
+<div><span class="k">Krok 1</span><h3>Nabídka</h3><p>Podle počtu dokladů, zaměstnanců a registrace k DPH.</p></div>
+<div><span class="k">Krok 2</span><h3>Smlouva</h3><p>Smlouva o vedení účetnictví a mezd a dohoda o převzetí.</p></div>
+<div><span class="k">Krok 3</span><h3>Převzetí</h3><p>Předávací protokol a kontrola počátečních zůstatků.</p></div>
+<div><span class="k">Krok 4</span><h3>První měsíc</h3><p>Agenda běží dál bez přerušení.</p></div>
+</div>
+</div></section>
+
+<section class="sec" id="rozsah"><div class="wrap">
+<div class="head"><div><span class="eyebrow">Rozsah</span><h2>Tři varianty měsíčního paušálu</h2></div><p>Variantu volíte podle toho, co chcete mít vyřešené. Rozsah můžete kdykoli rozšířit.</p></div>
+<div class="cmp-wrap"><table class="cmp">
+<thead><tr><th></th><th><span>Varianta 1</span><b>Účetnictví</b></th><th><span>Varianta 2</span><b>Mzdy</b></th><th class="hl"><span>Varianta 3</span><b>Účetnictví a mzdy</b></th></tr></thead>
+<tbody>
+<tr class="grp"><th colspan="4">Účetnictví</th></tr>
+<tr><th>Vedení účetnictví a měsíční uzávěrka</th><td><i class="y"></i></td><td><i class="n"></i></td><td class="hl"><i class="y"></i></td></tr>
+<tr><th>Přiznání k DPH a kontrolní hlášení</th><td><i class="y"></i></td><td><i class="n"></i></td><td class="hl"><i class="y"></i></td></tr>
+<tr><th>Roční účetní závěrka a přiznání k dani z příjmů</th><td><i class="y"></i></td><td><i class="n"></i></td><td class="hl"><i class="y"></i></td></tr>
+<tr class="grp"><th colspan="4">Mzdy</th></tr>
+<tr><th>Zpracování mezd a výplatní pásky</th><td><i class="n"></i></td><td><i class="y"></i></td><td class="hl"><i class="y"></i></td></tr>
+<tr><th>Odvody pojistného a záloh na daň</th><td><i class="n"></i></td><td><i class="y"></i></td><td class="hl"><i class="y"></i></td></tr>
+<tr><th>Hlášení zaměstnavatele a roční zúčtování</th><td><i class="n"></i></td><td><i class="y"></i></td><td class="hl"><i class="y"></i></td></tr>
+</tbody></table></div>
+<div class="price">
+<div><h3>Měsíční paušál</h3><p>Podle varianty a počtu dokladů.</p></div>
+<div><h3>Mzdy</h3><p>Za zaměstnance a měsíc, včetně dohod.</p></div>
+<div><h3>Roční závěrka</h3><p>Pevná cena za závěrku, přiznání a zveřejnění.</p></div>
+<div><h3>Mimořádné práce</h3><p>Hodinovou sazbou nebo pevnou cenou, vždy po dohodě předem.</p></div>
+</div>
+</div></section>
+
+<section class="sec ice" id="poptavka"><div class="wrap req">
+<div><span class="eyebrow">Poptávka</span><h2>Napište nám</h2><p>Stačí pár údajů o vaší společnosti. Ozveme se a připravíme nabídku s pevně popsaným rozsahem a cenou.</p></div>
+<form class="form" id="form" novalidate><input type="hidden" name="ts" value=""><input type="text" name="web" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+<label for="f-rozsah" class="full">Co potřebujete<select id="f-rozsah" name="rozsah"><option>Účetnictví a mzdy</option><option>Jen účetnictví</option><option>Jen mzdy</option><option>Zatím nevím</option></select></label>
+<label for="f-zam">Zaměstnanci<input id="f-zam" name="zamestnanci" inputmode="numeric" placeholder="počet"></label>
+<label for="f-dokl">Doklady měsíčně<select id="f-dokl" name="doklady"><option value="">rozmezí</option><option>do 50</option><option>50–150</option><option>150–300</option><option>nad 300</option></select></label>
+<label for="f-dph">Plátce DPH<select id="f-dph" name="dph"><option value="">vyberte</option><option>ano – měsíčně</option><option>ano – čtvrtletně</option><option>ne</option></select></label>
+<label for="f-od">Od kdy<input id="f-od" name="od" placeholder="např. 1. 1. 2027"></label>
+<label for="f-jmeno">Jméno<input id="f-jmeno" name="jmeno" required autocomplete="name"></label>
+<label for="f-firma">Společnost<input id="f-firma" name="firma" autocomplete="organization"></label>
+<label for="f-email">E-mail<input id="f-email" name="email" type="email" required autocomplete="email"></label>
+<label for="f-tel">Telefon<input id="f-tel" name="telefon" type="tel" autocomplete="tel"></label>
+<label for="f-zprava" class="full">Poznámka<textarea id="f-zprava" name="zprava" placeholder="např. kdo vás vede dnes, zvláštnosti agendy"></textarea></label>
+<div class="full"><button class="btn" type="submit">Poslat poptávku</button></div>
+<p class="small full">Údaje použijeme jen k přípravě nabídky – viz <a href="#gdpr">zpracování osobních údajů</a>.</p>
+<p class="ok" id="form-ok" tabindex="-1" hidden></p>
+</form>
+</div></section>
+
+<section class="contact" id="kontakt"><div class="wrap">
+<div class="ct-head"><div><span class="eyebrow">Kontakt</span><h2>Náš tým</h2></div>
+<div class="ct-where"><p class="cities"><span>Praha</span><span>Pardubice</span><span>Děčín</span></p><p>Klienty máme z celé republiky, doklady přebíráme i elektronicky.</p></div></div>
+<div class="people">
+<div><span class="r">Účetnictví a mzdy</span><h3>Ing. Kamila Malá</h3><p>jednatelka</p><div class="c"><span>+420 776 680 002</span><span>mala@pmba-tax.cz</span></div></div>
+<div><span class="r">Nabídky a smlouvy</span><h3>Mgr. Jakub Pastora</h3><p>jednatel</p><div class="c"><span>+420 776 389 775</span><span>pastora@pmba-tax.cz</span></div></div>
+<div><span class="r">Daňové poradenství</span><h3>Mgr. Veronika Pastorová</h3><p>spolupracující advokátka<br>daňové poradenství v rámci výkonu advokacie</p><div class="c"><span>+420 774 992 310</span><span>pastorova@pmba-tax.cz</span></div></div>
+</div>
+<a class="btn" href="#poptavka">Poslat poptávku</a>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="row"><img src="pmba-tax-znacka-inverzni.png" alt="PMBA Tax" width="1320" height="314"><span>info@pmba-tax.cz</span></div>
+<div>PMBA Tax s.r.o. · IČO 30133530 · sídlo Husovo nám. 74/5, Děčín IV-Podmokly, 405 02 Děčín · zapsaná v obchodním rejstříku vedeném Krajským soudem v Ústí nad Labem, oddíl C, vložka 56604.<br>Daňové poradenství a právní služby poskytuje samostatně Mgr. Veronika Pastorová, advokátka zapsaná v seznamu advokátů vedeném Českou advokátní komorou pod ev. č. 19378.</div>
+<details id="gdpr"><summary>Zpracování osobních údajů</summary>
+<div class="gdpr">
+<p><b>Správce.</b> PMBA Tax s.r.o., IČO 30133530, se sídlem Husovo nám. 74/5, Děčín IV-Podmokly, 405 02 Děčín, e-mail info@pmba-tax.cz.</p>
+<p><b>Jaké údaje a proč.</b> Údaje, které nám sami zašlete formulářem nebo e-mailem (jméno, společnost, e-mail, telefon a údaje o rozsahu agendy), zpracováváme k vyřízení poptávky a přípravě nabídky.</p>
+<p><b>Právní základ.</b> Provedení opatření před uzavřením smlouvy na vaši žádost (čl. 6 odst. 1 písm. b) GDPR) a oprávněný zájem odpovědět na došlou komunikaci (čl. 6 odst. 1 písm. f) GDPR).</p>
+<p><b>Jak dlouho.</b> 12 měsíců od vyřízení poptávky; vznikne-li smluvní vztah, po dobu jeho trvání a poté po dobu stanovenou právními předpisy, zejména zákonem o účetnictví a zákonem o dani z přidané hodnoty.</p>
+<p><b>Příjemci.</b> Poskytovatelé webhostingu a e-mailových služeb jako zpracovatelé. Údaje nepředáváme do třetích zemí.</p>
+<p><b>Vaše práva.</b> Přístup, oprava, výmaz, omezení zpracování, přenositelnost a námitka proti zpracování na základě oprávněného zájmu; stížnost lze podat u Úřadu pro ochranu osobních údajů (www.uoou.gov.cz).</p>
+<p><b>Cookies.</b> Web nepoužívá analytické ani marketingové cookies.</p>
+</div></details>
+</div></footer>
+
+<script>
+(function(){
+  /* menu */
+  var t=document.querySelector('.menu-toggle'),n=document.getElementById('nav');
+  if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+    n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');t.setAttribute('aria-expanded',false)}})}
+  /* lišta a aktivní položka */
+  var top=document.querySelector('.top'),links=[].slice.call(document.querySelectorAll('.nav a:not(.btn)'));
+  function onScroll(){
+    if(top)top.classList.toggle('small',(window.scrollY||0)>40);
+    var cur='';links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s&&s.getBoundingClientRect().top<120)cur=a.getAttribute('href')});
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')===cur)});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  /* GDPR v patičce – otevřít při prokliku */
+  document.querySelectorAll('a[href="#gdpr"]').forEach(function(a){a.addEventListener('click',function(){var d=document.getElementById('gdpr');if(d)d.open=true})});
+  /* formulář */
+  var f=document.getElementById('form');
+  if(f){
+    var ts=f.querySelector('input[name=ts]');if(ts)ts.value=Date.now();
+    var chyba='Odeslání se nepodařilo. Napište nám prosím na info@pmba-tax.cz.';
+    f.addEventListener('submit',function(e){
+      e.preventDefault();if(!f.reportValidity())return;
+      var b=f.querySelector('button[type=submit]'),ok=document.getElementById('form-ok');b.disabled=true;
+      var fd=new FormData(f);
+      if(fd.get('web')||(Date.now()-Number(fd.get('ts')||0))<3000){ok.textContent='Děkujeme, poptávku jsme přijali. Ozveme se vám s nabídkou.';ok.hidden=false;b.disabled=false;return;}
+      fd.delete('web');fd.delete('ts');
+      fd.append('_subject','Web PMBA Tax: poptávka');fd.append('_template','table');fd.append('_captcha','false');
+      fetch('https://formsubmit.co/ajax/info@pmba-tax.cz',{method:'POST',headers:{'Accept':'application/json'},body:fd}).then(function(r){return r.json()})
+        .then(function(d){var good=d&&(d.success===true||d.success==='true');ok.textContent=good?'Děkujeme, poptávku jsme přijali. Ozveme se vám s nabídkou.':chyba;if(good)f.reset();})
+        .catch(function(){ok.textContent=chyba;})
+        .then(function(){ok.hidden=false;ok.focus();b.disabled=false;});
+    });
+  }
+})();
+</script>
+</body></html>
